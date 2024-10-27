@@ -28,9 +28,14 @@ class ComplexNumber {
     }
 
     public ComplexNumber div(final ComplexNumber other) {
-        final double commonDenominator = other.getReal() * other.getReal() + other.getImaginary() * other.getImaginary();
+        final double commonDenominator = other.getReal() * other.getReal()
+                + other.getImaginary() * other.getImaginary();
         final double realNumerator = this.getReal() * other.getReal() + this.getImaginary() * other.getImaginary();
         final double imaginaryNumerator = other.getReal() * this.getImaginary() - this.getReal() * other.getImaginary();
         return new ComplexNumber(realNumerator / commonDenominator, imaginaryNumerator / commonDenominator);
+    }
+    
+    public static void main(String[] args) {
+        
     }
 }
