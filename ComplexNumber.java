@@ -22,7 +22,9 @@ class ComplexNumber {
     }
     
     public ComplexNumber sub(final ComplexNumber other) {
-        return null;
+        double newReal = this.real - other.real;
+        double newImaginary = this.imaginary - other.imaginary;
+        return new ComplexNumber(newReal, newImaginary);
     }
 
     public ComplexNumber times(final ComplexNumber other) {
